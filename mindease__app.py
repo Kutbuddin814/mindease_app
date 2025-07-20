@@ -19,7 +19,7 @@ model = joblib.load("enhanced_physical_health_model.pkl")
 st.set_page_config(page_title="DualCare: AI Health Assistant", layout="centered")
 
 # Show logo
-logo = Image.open("dualcare_logo.png")
+logo = Image.open("dualcare_logo.jpeg")
 st.image(logo, width=150)
 
 # Title
