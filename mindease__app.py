@@ -56,52 +56,52 @@ x_input = np.array([[1 if val == "Yes" else 0 for val in inputs]])
 # Tips dictionary
 tips = {
     'Flu': (
-        "🛌 *Rest*: Get plenty of sleep.\n"
-        "💧 *Hydration*: Drink lots of fluids (water, soup, herbal tea).\n"
-        "💊 *Medicine*: Use over-the-counter meds for fever and body aches.\n"
-        "❌ *Avoid*: Cold exposure and crowded areas if contagious."
+        "Rest: Get plenty of sleep.\n"
+        "Hydration: Drink lots of fluids (water, soup, herbal tea).\n"
+        "Medicine: Use over-the-counter meds for fever and body aches.\n"
+        "Avoid: Cold exposure and crowded areas if contagious."
     ),
     'Cold': (
-        "🧣 *Stay Warm*: Use a scarf or warm clothing.\n"
-        "🍵 *Steam*: Inhale steam to clear nasal blockage.\n"
-        "🛌 *Rest*: Let your body recover naturally.\n"
-        "🌿 *Natural Remedies*: Honey, ginger, and tulsi can help."
+        "Stay Warm: Use a scarf or warm clothing.\n"
+        "Steam: Inhale steam to clear nasal blockage.\n"
+        "Rest: Let your body recover naturally.\n"
+        "Natural Remedies: Honey, ginger, and tulsi can help."
     ),
     'Migraine': (
-        "🌗 *Avoid Bright Light*: Rest in a dark, quiet room.\n"
-        "💊 *Pain Relievers*: Use prescribed medications.\n"
-        "🧘 *Relaxation*: Try deep breathing or meditation.\n"
-        "📖 *Track Triggers*: Keep a diary of foods/situations causing migraines."
+        "Avoid Bright Light: Rest in a dark, quiet room.\n"
+        "Pain Relievers: Use prescribed medications.\n"
+        "Relaxation: Try deep breathing or meditation.\n"
+        "Track Triggers: Keep a diary of foods/situations causing migraines."
     ),
     'Food Poisoning': (
-        "💦 *Hydrate*: Drink ORS (oral rehydration salts) or coconut water.\n"
-        "🥣 *Eat Light*: Begin with bananas, toast, or rice.\n"
-        "🧬 *Hygiene*: Wash hands and clean utensils properly.\n"
-        "❗ *Consult Doctor*: If vomiting/diarrhea persists for 2+ days."
+        "Hydrate: Drink ORS (oral rehydration salts) or coconut water.\n"
+        "Eat Light: Begin with bananas, toast, or rice.\n"
+        "Hygiene: Wash hands and clean utensils properly.\n"
+        "Consult Doctor: If vomiting/diarrhea persists for 2+ days."
     ),
     'Typhoid': (
-        "💊 *Antibiotics*: Take the full prescribed course.\n"
-        "🥣 *Soft Diet*: Eat porridge, khichdi, or soup.\n"
-        "🚰 *Boil Water*: Only drink purified or boiled water.\n"
-        "❌ *Avoid Raw Food*: Especially street food or cut fruits."
+        "Antibiotics: Take the full prescribed course.\n"
+        "Soft Diet: Eat porridge, khichdi, or soup.\n"
+        "Boil Water: Only drink purified or boiled water.\n"
+        "Avoid Raw Food: Especially street food or cut fruits."
     ),
     'Malaria': (
-        "🛎️ *Rest & Medication*: Start anti-malarial drugs early.\n"
-        "🦟 *Mosquito Protection*: Use repellents and nets.\n"
-        "🌡️ *Monitor Fever*: Keep track of spikes.\n"
-        "🚰 *Hydration*: Keep fluids up to avoid weakness."
+        "Rest & Medication: Start anti-malarial drugs early.\n"
+        "Mosquito Protection: Use repellents and nets.\n"
+        "Monitor Fever: Keep track of spikes.\n"
+        "Hydration: Keep fluids up to avoid weakness."
     ),
     'COVID-19': (
-        "🤷 *Isolate*: Avoid contact until negative.\n"
-        "🧬 *Sanitize*: Wash hands and disinfect surfaces.\n"
-        "🧘 *Monitor Symptoms*: Especially breathing and O2 levels.\n"
-        "🏥 *Seek Help*: For persistent fever or chest tightness."
+        "Isolate: Avoid contact until negative.\n"
+        "Sanitize: Wash hands and disinfect surfaces.\n"
+        "Monitor Symptoms: Especially breathing and O2 levels.\n"
+        "Seek Help: For persistent fever or chest tightness."
     ),
     'Dengue': (
-        "🛌 *Rest*: Avoid exertion.\n"
-        "💧 *Fluids*: Coconut water, ORS, and papaya leaf juice (optional).\n"
-        "🩸 *Monitor Platelets*: Get blood tests regularly.\n"
-        "❌ *No Aspirin*: Avoid blood-thinning meds."
+        "Rest: Avoid exertion.\n"
+        "Fluids: Coconut water, ORS, and papaya leaf juice (optional).\n"
+        "Monitor Platelets: Get blood tests regularly.\n"
+        "No Aspirin: Avoid blood-thinning meds."
     )
 }
 
@@ -111,8 +111,8 @@ if st.button("🔍 Predict Disease"):
     probs = model.predict_proba(x_input)[0]
     classes = model.classes_
 
-    st.markdown(f"### 🧪 Likely Disease: **{prediction}**")
-    st.markdown(f"#### 💡 Prevention Tips:\n{tips.get(prediction, 'Consult a doctor.')}")
+    st.markdown(f"###  Likely Disease might be: {prediction}")
+    st.markdown(f"#### Prevention Tips:\n{tips.get(prediction, 'Always Consult a doctor.')}")
 
     # Bar chart
     fig, ax = plt.subplots(figsize=(8, 4))
