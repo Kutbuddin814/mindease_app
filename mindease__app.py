@@ -17,12 +17,11 @@ import streamlit.components.v1 as components
 model = joblib.load("enhanced_physical_health_model.pkl")
 
 # App config
-st.set_page_config(page_title="MindEase+: AI Health Assistant", layout="centered")
-st.title("🧠 MindEase+: AI Assistant for Mental & Physical Health")
-st.markdown("**Empowering SDG 3 – Good Health & Well-Being**")
+st.set_page_config(page_title="DualCare: AI Health Assistant", layout="centered")
+st.title(" DualCare: AI Assistant for Mental & Physical Health")
 
 # Section: Mental Health Chatbot (Botpress Embed)
-st.header("💬 Mental Health Chatbot")
+st.header(" Mental Health Chatbot")
 st.markdown("Talk to the chatbot below for support based on how you're feeling:")
 components.html("""
 <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
@@ -30,7 +29,7 @@ components.html("""
 """, height=500)
 
 # Section: Physical Health Checker
-st.header("🩺 Physical Health Symptom Checker")
+st.header(" Physical Health Symptom Checker")
 st.markdown("Select your symptoms to get a disease prediction and tips.")
 
 # Symptom inputs
