@@ -68,56 +68,55 @@ with st.form("symptom_form"):
         user_inputs.append(1 if user_input == "Yes" else 0)
     submitted = st.form_submit_button("🔍 Predict")
 
-
-# --- Original Full Definitions of Tips ---
+# --- Full Original Definitions of Tips (Plain, No Contact, No Icons) ---
 tips = {
     'Flu': (
-        "Rest: Get plenty of sleep.\n"
-        "Hydration: Drink lots of fluids (water, soup, herbal tea).\n"
-        "Medicine: Use over-the-counter meds for fever and body aches.\n"
-        "Avoid: Cold exposure and crowded areas if contagious."
+        "Rest well to let your body fight off the virus.\n"
+        "Drink plenty of fluids to stay hydrated.\n"
+        "Take medications like paracetamol for fever and body aches.\n"
+        "Avoid exposure to cold and crowded places."
     ),
     'Cold': (
-        "Stay Warm: Use a scarf or warm clothing.\n"
-        "Steam: Inhale steam to clear nasal blockage.\n"
-        "Rest: Let your body recover naturally.\n"
-        "Natural Remedies: Honey, ginger, and tulsi can help."
+        "Keep yourself warm with appropriate clothing.\n"
+        "Inhale steam to relieve nasal congestion.\n"
+        "Allow your body time to rest and recover.\n"
+        "Use natural remedies such as honey and ginger."
     ),
     'Migraine': (
-        "Avoid Bright Light: Rest in a dark, quiet room.\n"
-        "Pain Relievers: Use prescribed medications.\n"
-        "Relaxation: Try deep breathing or meditation.\n"
-        "Track Triggers: Keep a diary of foods/situations causing migraines."
+        "Stay in a dark, quiet room to ease the pain.\n"
+        "Take doctor-prescribed pain relief medication.\n"
+        "Practice deep breathing and relaxation techniques.\n"
+        "Note down possible triggers like stress or certain foods."
     ),
     'Food Poisoning': (
-        "Hydrate: Drink ORS (oral rehydration salts) or coconut water.\n"
-        "Eat Light: Begin with bananas, toast, or rice.\n"
-        "Hygiene: Wash hands and clean utensils properly.\n"
-        "Consult Doctor: If vomiting/diarrhea persists for 2+ days."
+        "Rehydrate with ORS or clean water frequently.\n"
+        "Eat bland foods like bananas, toast, or rice.\n"
+        "Maintain proper hygiene while preparing or eating food.\n"
+        "See a doctor if symptoms continue for more than two days."
     ),
     'Typhoid': (
-        "Antibiotics: Take the full prescribed course.\n"
-        "Soft Diet: Eat porridge, khichdi, or soup.\n"
-        "Boil Water: Only drink purified or boiled water.\n"
-        "Avoid Raw Food: Especially street food or cut fruits."
+        "Take all antibiotic doses as prescribed by your doctor.\n"
+        "Stick to soft foods like porridge and soup.\n"
+        "Boil or purify drinking water before consumption.\n"
+        "Avoid eating raw fruits and street food."
     ),
     'Malaria': (
-        "Rest & Medication: Start anti-malarial drugs early.\n"
-        "Mosquito Protection: Use repellents and nets.\n"
-        "Monitor Fever: Keep track of spikes.\n"
-        "Hydration: Keep fluids up to avoid weakness."
+        "Begin anti-malarial medication early.\n"
+        "Use mosquito repellents and nets for protection.\n"
+        "Track and record any fever spikes.\n"
+        "Stay hydrated to support recovery."
     ),
     'COVID-19': (
-        "Isolate: Avoid contact until negative.\n"
-        "Sanitize: Wash hands and disinfect surfaces.\n"
-        "Monitor Symptoms: Especially breathing and O2 levels.\n"
-        "Seek Help: For persistent fever or chest tightness."
+        "Self-isolate until you test negative.\n"
+        "Regularly wash hands and clean surfaces.\n"
+        "Monitor symptoms like breathlessness or low oxygen.\n"
+        "Contact medical services if symptoms worsen."
     ),
     'Dengue': (
-        "Rest: Avoid exertion.\n"
-        "Fluids: Coconut water, ORS, and papaya leaf juice (optional).\n"
-        "Monitor Platelets: Get blood tests regularly.\n"
-        "No Aspirin: Avoid blood-thinning meds."
+        "Get adequate rest and sleep.\n"
+        "Drink fluids like water, ORS, or papaya leaf juice.\n"
+        "Regularly monitor platelet levels through blood tests.\n"
+        "Avoid painkillers that thin the blood like aspirin."
     )
 }
 
