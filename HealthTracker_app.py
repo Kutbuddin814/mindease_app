@@ -26,8 +26,6 @@ with st.sidebar:
         - Mental Well-being
         - Physical Health
     """)
-    st.markdown("---")
-    st.markdown("Made with ❤️ using Streamlit + Botpress")
 
 # Page title
 st.markdown("<h1 style='text-align:center;'>DualCare: AI Health Assistant</h1>", unsafe_allow_html=True)
