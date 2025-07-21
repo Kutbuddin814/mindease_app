@@ -61,12 +61,13 @@ with col2:
         "Vomiting": "Expelling stomach contents."
     }
 
-    user_inputs = []
-    with st.form("symptom_form"):
-        for label, help_text in symptoms.items():
-            user_input = st.selectbox(f"{label}:", ["No", "Yes"], help=help_text)
-            user_inputs.append(1 if user_input == "Yes" else 0)
-        submitted = st.form_submit_button("🔍 Predict")
+user_inputs = []
+with st.form("symptom_form"):
+    for label, help_text in symptoms.items():
+        user_input = st.selectbox(f"{label}:", ["Select", "Yes", "No"], help=help_text)
+        user_inputs.append(1 if user_input == "Yes" else 0)
+    submitted = st.form_submit_button("🔍 Predict")
+
 
 # --- Original Full Definitions of Tips ---
 tips = {
